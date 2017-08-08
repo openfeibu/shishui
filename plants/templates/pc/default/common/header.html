@@ -13,131 +13,143 @@
                     <script >
                         $(document).ready(function() {
                             $("#select1 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+//                                if($(this).children("a").text() == "全部") {
+//                                    $(this).parent("ul").find("li").siblings().removeClass();
+//                                    $(this).children("a").css({"background": "#10ac5f", "color": "#FFF"})
+//                                }
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectA").remove();
                                 } else {
                                     var copyThisA = $(this).clone();
                                     if ($("#selectA").length > 0) {
-                                        $("#selectA a").html($(this).text());
+                                        $("#selectA").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisA.attr("id", "selectA"));
                                     }
                                 }
+                                form();
                             });
                             $("#select2 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectB").remove();
                                 } else {
                                     var copyThisB = $(this).clone();
                                     if ($("#selectB").length > 0) {
-                                        $("#selectB a").html($(this).text());
+                                        $("#selectB").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisB.attr("id", "selectB"));
                                     }
                                 }
+                                form();
                             });
                             $("#select3 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectC").remove();
                                 } else {
                                     var copyThisC = $(this).clone();
                                     if ($("#selectC").length > 0) {
-                                        $("#selectC a").html($(this).text());
+                                        $("#selectC").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisC.attr("id", "selectC"));
                                     }
                                 }
+                                form();
                             });
                             $("#select4 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectD").remove();
                                 } else {
                                     var copyThisD = $(this).clone();
                                     if ($("#selectD").length > 0) {
-                                        $("#selectD a").html($(this).text());
+                                        $("#selectD").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisD.attr("id", "selectD"));
                                     }
                                 }
+                                form();
                             });
                             $("#select5 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectE").remove();
                                 } else {
                                     var copyThisE = $(this).clone();
                                     if ($("#selectE").length > 0) {
-                                        $("#selectE a").html($(this).text());
+                                        $("#selectE").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisE.attr("id", "selectE"));
                                     }
                                 }
+                                form();
                             });
                             $("#select6 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectF").remove();
                                 } else {
                                     var copyThisF = $(this).clone();
                                     if ($("#selectF").length > 0) {
-                                        $("#selectF a").html($(this).text());
+                                        $("#selectF").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisF.attr("id", "selectF"));
                                     }
                                 }
+                                form();
+
                             });
                             $("#select7 li").click(function() {
-                                $(this).addClass("selected").siblings().removeClass("selected");
+                                $(this).addClass("selecting").siblings().removeClass("selecting");
                                 if ($(this).hasClass("select-all")) {
                                     $("#selectG").remove();
                                 } else {
                                     var copyThisG = $(this).clone();
                                     if ($("#selectG").length > 0) {
-                                        $("#selectG a").html($(this).text());
+                                        $("#selectG").html($(this).children("a").clone());
                                     } else {
                                         $("#select-result").append(copyThisG.attr("id", "selectG"));
                                     }
                                 }
+                                form();
                             });
 
                             $("#selectA").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select1 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select1 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $("#selectB").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select2 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $("#selectC").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select3 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $("#selectD").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select4 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $("#selectE").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select5 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $("#selectF").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select6 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $("#selectG").live("click",
                                 function() {
                                     $(this).remove();
-                                    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected");
+                                    $("#select7 .select-all").addClass("selecting").siblings().removeClass("selecting");
                                 });
                             $(".select li").live("click",
                                 function() {
@@ -147,7 +159,16 @@
                                         $("#select-no").show();
                                     }
                                 });
-                            $("a").click(function(){
+//                            $("li").click(function(){
+                                $("#select-result>.selecting").each(function() {
+                                    var color = $.trim($(this).children("a").attr('class'));
+                                    console.log(color);
+                                    $("a[class = "+color+"]").css({"background": "#10ac5f", "color": "#FFF"})
+//                                    $("a[class != "+color+"]").css();
+                                })
+//                            });
+                        });
+                        function form() {
                                 // 取得要提交的参数
                                 // 创建Form
                                 var form = $('<form></form>');
@@ -161,31 +182,31 @@
                                 form.append(my_c);
                                 form.append(my_mid);
                                 form.append(my_m);
-                                $("#select-result li").each(function () {
+                                $("#select-result>.selecting").each(function () {
                                     var value = $.trim($(this).children("a").attr('class'));
                                     var name = $.trim($(this).children("a").attr('id'));
-                                    console.log(name,value);
                                     var my_input = $('<input type="hidden" />');
                                     my_input.attr('name', name);
                                     my_input.attr('value', value);
                                     form.append(my_input);
                                 });
-                                // 附加到Form
+                                //附加到Form
                                 //附加到document
                                 $(document.body).append(form);
-                                //console.log(form);
                                 // 提交表单
-//                                form.submit();
-                            });
-                        });
+                                form.submit();
+                        }
+
                     </script>
-                    <ul class="list" id="select-result">
+                    <ul class="list" id="select-result" style="display: none">
                         <li>已选条件：</li>
-                        <li id="select-no">无</li>
+                        <?php if (!isset($inputshx)) :?><li id="select-no">无</li>
+                        <?php else :?> {$inputshx}
+                        <?php endif;?>
                     </ul>
                     <ul class="list" id="select1">
                         <li>生活型：</li>
-                        <li class="select-all selected"><a href="#">全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['shx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?>>全部</a></li>
                         {php $field = dr_field_options('shx','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="shx" class="{$value}">{$name}</a></li>
@@ -193,7 +214,7 @@
                     </ul>
                     <ul class="list" id="select2">
                         <li>湿地类型：</li>
-                        <li class="select-all selected"><a href="#">全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['sdlx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('sdlx','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="sdlx" class="{$value}">{$name}</a></li>
@@ -202,7 +223,7 @@
 
                     <ul class="list" id="select3">
                         <li>污水类型：</li>
-                        <li class="select-all selected"><a href="#" >全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['wslxx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('wslxx','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="wslxx" class="{$value}">{$name}</a></li>
@@ -210,7 +231,7 @@
                     </ul>
                     <ul class="list" id="select4">
                         <li>观赏特性：</li>
-                        <li class="select-all selected"><a href="#">全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['gstxx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('gstxx','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="gstxx" class="{$value}">{$name}</a></li>
@@ -218,7 +239,7 @@
                     </ul>
                     <ul class="list" id="select5">
                         <li>季象：</li>
-                        <li class="select-all selected"><a href="#" >全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['jx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('jx','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="jx" class="{$value}">{$name}</a></li>
@@ -226,7 +247,7 @@
                     </ul>
                     <ul class="list" id="select6">
                         <li>水深范围：</li>
-                        <li class="select-all selected"><a href="#" >全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['ssfww'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('ssfww','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="ssfww" class="{$value}">{$name}</a></li>
@@ -234,16 +255,11 @@
                     </ul>
                     <ul class="list" id="select7">
                         <li>气候类型：</li>
-                        <li class="select-all selected"><a href="#" >全部</a></li>
+                        <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['qhlx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('qhlx','1','news');} 
                         {loop $field $value $name}
                         <li><a href="javascript:;" id="qhlx" class="{$value}">{$name}</a></li>
                         {/loop}
                     </ul>
                 <!--</form>-->
-                <script>
-                    $(document).ready(function() {
-
-                    })
-                </script>
             </div>

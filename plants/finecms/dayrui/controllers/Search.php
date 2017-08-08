@@ -14,12 +14,35 @@ class Search extends M_Controller {
      * 内容搜索
      */
     public function index() {
-
+//var_dump($_GET);exit;
 		// 搜索参数
 		$get = $this->input->get(NULL, TRUE);
 		$get = isset($get['rewrite']) ? dr_rewrite_decode($get['rewrite']) : $get;
 
-//        echo $get['shx'];exit();
+
+        if(!empty($get['shx'])) {
+            $inputshx = "<li class='selecting' id='selectA'><a href='javascript:;' id='shx' class='{$get['shx']}'>shx</a></li>";
+        }
+        if (!empty($get['sdlx'])) {
+            $inputshx .= "<li class='selecting' id='selectB'><a href='javascript:;' id='sdlx' class='{$get['sdlx']}'>sdlx</a></li>";
+        }
+        if (!empty($get['wslxx'])) {
+            $inputshx .= "<li class='selecting' id='selectC'><a href='javascript:;' id='wslxx' class='{$get['wslxx']}'>wslxx</a></li>";
+        }
+        if (!empty($get['gstxx'])) {
+            $inputshx .= "<li class='selecting' id='selectD'><a href='javascript:;' id='gstxx' class='{$get['gstxx']}'>gstxx</a></li>";
+        }
+        if (!empty($get['jx'])) {
+            $inputshx .= "<li class='selecting' id='selectE'><a href='javascript:;' id='jx' class='{$get['jx']}'>jx</a></li>";
+        }
+        if (!empty($get['ssfww'])) {
+            $inputshx .= "<li class='selecting' id='selectF'><a href='javascript:;' id='ssfww' class='{$get['ssfww']}'>ssfww</a></li>";
+        }
+        if (!empty($get['qhlx'])) {
+            $inputshx .= "<li class='selecting' id='selectG'><a href='javascript:;' id='qhlx' class='{$get['qhlx']}'>qhlx</a></li>";
+        }
+
+        $this->template->assign('inputshx', $inputshx);
 		$catid = (int)$get['catid'];
 		$_GET['page'] = $get['page'];
         $page = max(1, (int)$_GET['page']);
