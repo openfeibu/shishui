@@ -7,7 +7,13 @@
     <script src="{HOME_THEME_PATH}js/jquery-1.8.3.min.js"></script>
 </head>
 <body>
-        <div class="head"></div>
+        <div class="main1">
+            <div class="head">
+                <div>
+                    <p>湿生植物素材库</p>
+                </div>
+            </div>
+        </div>
         <div class="main">
             <div class="select" id="select">
                     <script >
@@ -212,7 +218,7 @@
                         <li><a href="javascript:;" id="shx" class="{$value}">{$name}</a></li>
                         {/loop}
                     </ul>
-                    <ul class="list" id="select2">
+                    <ul class="list fl" id="select2">
                         <li>湿地类型：</li>
                         <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['sdlx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('sdlx','1','news');} 
@@ -221,7 +227,7 @@
                         {/loop}
                     </ul>
 
-                    <ul class="list" id="select3">
+                    <ul class="list fl" id="select3">
                         <li>污水类型：</li>
                         <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['wslxx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('wslxx','1','news');} 
@@ -229,7 +235,7 @@
                         <li><a href="javascript:;" id="wslxx" class="{$value}">{$name}</a></li>
                         {/loop}
                     </ul>
-                    <ul class="list" id="select4">
+                    <ul class="list fl" id="select4">
                         <li>观赏特性：</li>
                         <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['gstxx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('gstxx','1','news');} 
@@ -237,7 +243,7 @@
                         <li><a href="javascript:;" id="gstxx" class="{$value}">{$name}</a></li>
                         {/loop}
                     </ul>
-                    <ul class="list" id="select5">
+                    <ul class="list fl" id="select5">
                         <li>季象：</li>
                         <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['jx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('jx','1','news');} 
@@ -245,7 +251,7 @@
                         <li><a href="javascript:;" id="jx" class="{$value}">{$name}</a></li>
                         {/loop}
                     </ul>
-                    <ul class="list" id="select6">
+                    <ul class="list fl" id="select6">
                         <li>水深范围：</li>
                         <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['ssfww'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('ssfww','1','news');} 
@@ -253,7 +259,7 @@
                         <li><a href="javascript:;" id="ssfww" class="{$value}">{$name}</a></li>
                         {/loop}
                     </ul>
-                    <ul class="list" id="select7">
+                    <ul class="list fl" id="select7">
                         <li>气候类型：</li>
                         <li class="select-all selected"><a href="javascript:;" <?php if (!isset($_GET['qhlx'])):?> style="background: #10ac5f;color: #FFF"<?php endif;?> >全部</a></li>
                         {php $field = dr_field_options('qhlx','1','news');} 

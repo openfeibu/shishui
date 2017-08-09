@@ -1,6 +1,6 @@
 {template "header.html"}
 		<div class="content" id="content">
-		{list action=module module=news catid=$catid page=1 pagesize=9 urlrule=index.php?page=[page] order=displayorder,updatetime}
+		{list action=module module=news catid=$catid page=1 pagesize=12 urlrule=index.php?page=[page] order=displayorder,updatetime}
 			<ul class="img-list">
 				<li>
 					<img src="{dr_get_file($t.thumb)}" alt="">
