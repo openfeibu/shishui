@@ -1,6 +1,6 @@
 {template "header.html"}
             <div class="content" id="content">
-            {list action=sql module=$mid sql='$search_sql' page=1 pagesize=9 urlrule=$urlrule}
+            {list action=sql module=$mid sql='$search_sql' page=1 pagesize=12 urlrule=$urlrule}
             <ul class="img-list">
                     <li>
                         <img src="{dr_get_file($t.thumb)}" alt="">
